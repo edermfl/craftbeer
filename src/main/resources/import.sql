@@ -1,0 +1,1 @@
+insert into beer (id, alcohol_content, category, ingredients, name, price) values (null, '', 'Larger','Lúpulo, Cevada, Malte e Água', 'Bhrama Premium Puro Malte', 1.8) ;
