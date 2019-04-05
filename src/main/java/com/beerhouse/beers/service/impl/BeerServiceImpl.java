@@ -16,12 +16,16 @@ public class BeerServiceImpl implements BeerService {
     @Autowired
     public BeerRepository beerRepository;
 
+    @Override public Beer findById(final Long pId) {
+	return beerRepository.findOne(pId);
+    }
+
     @Override public List<Beer> listAllBeers() {
 	List<Beer> allBeers = beerRepository.findAll();
 	return allBeers;
     }
 
-    @Override public void save(final Beer pBeer) {
-	beerRepository.save(pBeer);
+    @Override public Beer save(final Beer pBeer) {
+	return beerRepository.save(pBeer);
     }
 }
