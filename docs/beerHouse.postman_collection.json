@@ -1,0 +1,236 @@
+{
+	"info": {
+		"_postman_id": "832c625c-1c99-4e1f-a4ad-a310482da21a",
+		"name": "beerHouse",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Request All (first page)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:9000/beerhouse/beers",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"beerhouse",
+						"beers"
+					]
+				},
+				"description": "Send a get request"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Request by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:9000/beerhouse/beers/6",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"beerhouse",
+						"beers",
+						"6"
+					]
+				},
+				"description": "Do a get request by id"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Request All (pagination)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:9000/beerhouse/beers?page=1",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"beerhouse",
+						"beers"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Request All (number of lines)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:9000/beerhouse/beers?lines=20",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"beerhouse",
+						"beers"
+					],
+					"query": [
+						{
+							"key": "lines",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"alcoholContent\": \"\",\n    \"category\": \"Pilsenr\",\n    \"ingredients\": \"Lúpulo, Cevada, Malte e Água\",\n    \"name\": \"Bhrama Premium Puro Malte\",\n    \"price\": 1.25\n}"
+				},
+				"url": {
+					"raw": "localhost:9000/beerhouse/beers",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"beerhouse",
+						"beers"
+					]
+				},
+				"description": "Do a POST request"
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Request",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"alcoholContent\": \"\",\n        \"category\": \"Larger\",\n        \"ingredients\": \"Lúpulo, Cevada, Malte e Água.\",\n        \"name\": \"Bhrama Premium Puro Malte\",\n        \"price\": null\n    }"
+				},
+				"url": {
+					"raw": "localhost:9000/beerhouse/beers/6",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"beerhouse",
+						"beers",
+						"6"
+					]
+				},
+				"description": "Do a PUT requestion by id"
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH request",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"price\": 5,\n    \"ingredients\": \"Água, Cereais não maltados e Lúpulo\"\n}"
+				},
+				"url": {
+					"raw": "localhost:9000/beerhouse/beers/5",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"beerhouse",
+						"beers",
+						"5"
+					]
+				},
+				"description": "Do a PATCH request by id"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:9000/beerhouse/beers/7",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"beerhouse",
+						"beers",
+						"7"
+					]
+				},
+				"description": "Do a DELETE request by id"
+			},
+			"response": []
+		}
+	]
+}
